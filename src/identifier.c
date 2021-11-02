@@ -5,7 +5,8 @@
 // no mínimo 1 caractere e no máximo 6 caracteres de comprimento
 // ----------------------------------------------------------------
 
-#include <stdio.h>
+#include "identifier.h"
+
 
 int valid_s(char ch) {
   if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')))
@@ -21,24 +22,27 @@ int valid_f(char ch) {
     return 0;
 }
 
-int main(void) {
-  char achar;
-  int  length, valid_id;
-  length = 0;
-  printf("Identificador: ");
-  achar = fgetc(stdin);
-  valid_id = valid_s(achar);
-  if(valid_id) {
-    length = 1;
+int identifier(char str[]) {
+  int length, valid_id, i; 
+
+  length = strlen(str);
+  
+  printf("\nIdentificador: ");
+  valid_id = valid_s(str[0]);
+
+  if (length == 0) {
+    printf("Invalido\n");
+    return 1;
   }
-  achar = fgetc(stdin);
-  while(achar != '\n') {
-    if(!(valid_f(achar))) {
+
+  i = 1;
+  while(i < length) {
+    if(!(valid_f(str[i]))) {
       valid_id = 0;
     }
-    length++;
-    achar = fgetc(stdin);
+    i++;
   }
+
   if (valid_id && (length >= 1) && (length < 6)) {
     printf("Valido\n");
     return 0;
@@ -47,4 +51,5 @@ int main(void) {
     printf("Invalido\n");
     return 1;
   }
+  
 }
