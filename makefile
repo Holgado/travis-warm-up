@@ -26,7 +26,7 @@ ifeq ($(shell uname -s), Darwin)
 C_COMPILER=clang
 endif
 
-UNITY_ROOT=../..
+UNITY_ROOT=Unity
 
 CFLAGS=-std=c99
 CFLAGS += -Wall
@@ -63,7 +63,7 @@ SYMBOLS=
 
 
 
-all: clean compile valgrind sanitizer
+all: clean compile run
 
 compile:
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
@@ -87,7 +87,7 @@ sanitizer:
 
 cov:
 	$(C_COMPILER) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ src/main.c src/identifier.c
-
+	
 run-cov:
 	./cov ABCDE
 	./cov abcde
@@ -97,7 +97,7 @@ run-cov:
 	./cov !BCD
 	./cov AB!CD
 	./cov
-
+	gcov -b cov-identifier.gcda
 clean:
 	$(CLEANUP) $(TARGET1)
 	rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov runvalgrind runsinitaizer noflag
