@@ -4,7 +4,7 @@ Simple Travis example for C using GCC compiler based on the identifier program p
 
 Test results:
 
-[<img alt="Build Status" src="https://app.travis-ci.com/Holgado/travis-warm-up.svg?branch=main" height="40">][travis-url]
+[<img alt="Build Status" src="https://travis-ci.com/Holgado/travis-warm-up.svg?branch=main" height="40">][travis-url]
 
 Important files:
 
