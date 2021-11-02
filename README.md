@@ -4,7 +4,7 @@ Simple Travis example for C using GCC compiler based on the identifier program p
 
 Test results:
 
-[<img alt="Build Status" src="https://www.travis-ci.com/rafaelgaribotti/travis-identifier.svg?branch=main" height="40">][travis-url]
+[<img alt="Build Status" src="https://www.travis-ci.com/holgado/travis-warm-up.svg?branch=main" height="40">][travis-url]
 
 Important files:
 
@@ -22,10 +22,10 @@ License
 -------
 MIT License. See [LICENSE](LICENSE) for details.
 
-[main-url]: https://github.com/rafaelgaribotti/travis-identifier
-[readme-url]: https://github.com/rafaelgaribotti/travis-identifier/blob/main/README.md
-[license-url]: https://github.com/rafaelgaribotti/travis-identifier/blob/main/LICENSE
+[main-url]: https://github.com/holgado/travis-warm-up
+[readme-url]: https://github.com/holgado/travis-warm-up/blob/main/README.md
+[license-url]: https://github.com/holgado/travis-warm-up/blob/main/LICENSE
 [license-img]: https://img.shields.io/github/license/rsp/travis-hello-modern-cpp.svg
-[travis-url]: https://www.travis-ci.com/rafaelgaribotti/travis-identifier
-[travis-img]: https://www.travis-ci.com/rafaelgaribotti/travis-identifier.svg?branch=master
-[github-follow-url]: https://github.com/rafaelgaribotti
+[travis-url]: https://www.travis-ci.com/holgado/travis-warm-up
+[travis-img]: https://www.travis-ci.com/holgado/travis-warm-up.svg?branch=master
+[github-follow-url]: https://github.com/holgado
